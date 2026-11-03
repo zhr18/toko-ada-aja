@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toko Ada Aja · Kebutuhan harian, ada aja di sini</title>
+<meta name="description" content="Toko Ada Aja: toko serba ada untuk kebutuhan dapur, makanan, perawatan diri, elektronik, alat tulis, serta ibu dan bayi. Toko dummy untuk demo Ganes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--brand:#14503C;--brand-d:#0E3D2D;--accent:#F0A500;--soft:#E6F3EC;--ink:#131A16;--ink2:#43514A;--ink3:#6B7771;--line:#DCE3DF;--bg:#F4F6F5;--card:#FFFFFF;--ok:#1A7F53;--warn:#B45309;--bad:#B42318;--desk:#E4E9E6;--thumb:#EEF2F0;--col:390px;
+  --font:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;--cond:'Barlow Condensed',Inter,system-ui,sans-serif}
+:root{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0;height:100%}
+body{background:var(--desk);font:15px/1.5 var(--font);color:var(--ink);-webkit-font-smoothing:antialiased}
+button,input{font:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+
+/* ---------- portrait phone column: always iPhone 12 width (390 pt), centred on bigger screens ---------- */
+#app{position:relative;width:100%;max-width:var(--col);height:100%;margin:0 auto;background:var(--bg);display:flex;flex-direction:column;overflow:hidden}
+@media (min-width:420px){#app{box-shadow:0 0 0 1px rgba(0,0,0,.04),0 20px 60px rgba(0,0,0,.12)}}
+header{flex:none;background:var(--card);padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:10px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:17px;letter-spacing:-.01em}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--brand);color:#fff;display:grid;place-items:center;font-style:normal;font-size:15px}
+.bar .sp{flex:1}
+.icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;position:relative}
+.icon .n{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--brand);color:#fff;font-size:11px;font-weight:700;line-height:18px;text-align:center}
+.search{margin-top:10px;display:flex;align-items:center;gap:8px;height:42px;padding:0 12px;border-radius:12px;background:var(--bg);color:var(--ink3)}
+.search input{flex:1;min-width:0;border:0;background:none;outline:none;color:var(--ink)}
+main{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:14px 16px 96px}
+nav.tabs{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(5,1fr);background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:5}
+.tab{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;font-weight:600;color:var(--ink3);padding:4px 0}
+.tab.on{color:var(--brand)}
+h2{font-size:18px;margin:18px 0 10px;letter-spacing:-.01em}
+.hero{border-radius:18px;background:linear-gradient(135deg,var(--brand),#F59E0B);color:#fff;padding:18px;position:relative;overflow:hidden}
+.hero b{display:block;font-size:20px;line-height:1.25;letter-spacing:-.01em}
+.hero span{display:block;margin-top:6px;font-size:13px;opacity:.95}
+.hero .cta{margin-top:12px;display:inline-flex;height:36px;align-items:center;padding:0 14px;border-radius:10px;background:#fff;color:var(--brand-d);font-weight:700;font-size:13px}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cat{background:var(--card);border-radius:14px;padding:12px 8px;text-align:center;font-size:12px;font-weight:600;line-height:1.3}
+.cat .ic{width:40px;height:40px;margin:0 auto 6px;border-radius:12px;display:grid;place-items:center;font-size:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pc{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.pc .img{aspect-ratio:1;display:grid;place-items:center;font-size:44px}
+.pc .t{padding:10px 10px 0;font-size:13px;font-weight:600;line-height:1.35;min-height:44px}
+.pc .p{padding:4px 10px 0;font-weight:800}
+.pc .p s{font-weight:500;color:var(--ink3);font-size:11px;margin-left:4px}
+.pc .s{padding:2px 10px 10px;font-size:11.5px;font-weight:600}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+.pd .img{aspect-ratio:1.2;border-radius:18px;display:grid;place-items:center;font-size:80px}
+.pd h1{font-size:20px;line-height:1.3;margin:14px 0 4px;letter-spacing:-.01em}
+.pd .price{font-size:22px;font-weight:800}.pd .price s{font-size:13px;color:var(--ink3);font-weight:500;margin-left:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{height:36px;padding:0 14px;border-radius:10px;border:1.5px solid var(--line);font-size:13px;font-weight:600;background:var(--card)}
+.chip.on{border-color:var(--brand);color:var(--brand)}
+.chip[disabled]{opacity:.45;text-decoration:line-through}
+.spec{background:var(--card);border-radius:14px;padding:4px 14px;margin-top:12px}
+.spec div{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+.spec div:last-child{border-bottom:0}.spec span:first-child{color:var(--ink3)}
+.desc{color:var(--ink2);font-size:14px;margin:10px 0 0}
+.desc.empty{font-style:italic;color:var(--ink3)}
+.buy{position:sticky;bottom:0;margin-top:16px;display:flex;gap:10px;padding:10px 0;background:linear-gradient(transparent,var(--bg) 30%)}
+.btn{flex:1;height:48px;border-radius:14px;background:var(--brand);color:#fff;font-weight:700}
+.btn.sec{background:var(--card);color:var(--ink);border:1.5px solid var(--line)}
+.btn[disabled]{background:var(--line);color:var(--ink3)}
+.card{background:var(--card);border-radius:16px;padding:14px;margin-bottom:10px}
+.card b{display:block;font-size:15px}.card p{margin:4px 0 0;color:var(--ink2);font-size:13.5px}
+.tag{display:inline-block;margin-top:8px;padding:3px 9px;border-radius:8px;background:var(--soft);color:var(--brand-d);font-size:12px;font-weight:700}
+details{background:var(--card);border-radius:14px;margin-bottom:8px;padding:12px 14px}
+summary{font-weight:700;font-size:14px;cursor:pointer;list-style:none}
+summary::after{content:"+";float:right;color:var(--ink3)} details[open] summary::after{content:"–"}
+details p{margin:8px 0 0;color:var(--ink2);font-size:13.5px}
+.row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}.row:last-child{border:0}
+.field{display:flex;gap:8px}.field input{flex:1;height:46px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);padding:0 12px;outline:none}
+.field .btn{flex:none;width:96px}
+.empty{text-align:center;color:var(--ink3);padding:30px 0}
+.toast{position:absolute;left:16px;right:16px;bottom:84px;padding:12px 14px;border-radius:14px;background:var(--ink);color:var(--card);font-size:13.5px;font-weight:600;transform:translateY(20px);opacity:0;transition:.25s;z-index:9;pointer-events:none}
+.toast.show{transform:none;opacity:1}
+.chatbtn{display:flex;align-items:center;gap:10px;width:100%;margin-top:6px;padding:14px;border-radius:16px;background:var(--soft);color:var(--brand-d);font-weight:700;text-align:left}
+.foot{margin-top:22px;font-size:11.5px;color:var(--ink3);text-align:center}
+/* same look as the Gelora demo: condensed headings and prices, hairline cards, pine + saffron */
+h1,h2,.pd .price,.pc .p,.hero b,.logo{font-family:var(--cond);font-weight:700;letter-spacing:.01em}
+h2{font-size:24px}.pd h1{font-size:28px}.pc .p{font-size:20px}.pd .price{font-size:28px}.hero b{font-size:30px;line-height:1.05}
+.pc .p s,.pd .price s{font-family:var(--font)}
+.logo{font-size:24px}.logo i{display:none}
+.hero{background:var(--brand)}.hero span{color:#CBE2D6;opacity:1}
+.hero .cta{background:var(--accent);color:var(--ink)}
+.pc,.cat,.card,details,.spec,.chip{border:1px solid var(--line)}
+.pc .img,.pd .img{background:var(--thumb)!important}
+.pc .img svg{width:60%;height:60%}.pd .img svg{width:46%;height:70%}
+.cat .ic{background:var(--thumb)!important}.cat .ic svg{width:26px;height:26px}
+.btn:focus-visible,.pc:focus-visible,.cat:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="bar">
+      <a class="logo" href="#/"><i>A</i>Toko Ada Aja</a><span class="sp"></span>
+      <a class="icon" href="#/keranjang" aria-label="Keranjang"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 4h2l2.4 11.2a2 2 0 002 1.6h7.7a2 2 0 002-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><span class="n" id="cartN" hidden>0</span></a>
+    </div>
+    <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" placeholder="Cari produk, misalnya kopi atau popok" aria-label="Cari produk"></label>
+  </header>
+  <main id="main" aria-live="polite"></main>
+  <nav class="tabs" aria-label="Menu">
+    <a class="tab" href="#/" data-t="home"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11l8-7 8 7v9H4z"/></svg>Beranda</a>
+    <a class="tab" href="#/kategori" data-t="kategori"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>Kategori</a>
+    <a class="tab" href="#/promo" data-t="promo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Promo</a>
+    <a class="tab" href="#/lacak" data-t="lacak"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="17" cy="17.5" r="1.5"/></svg>Lacak</a>
+    <a class="tab" href="#/bantuan" data-t="bantuan"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 015 .5c0 2-2.5 2-2.5 4M12 17h.01"/></svg>Bantuan</a>
+  </nav>
+  <div class="toast" id="toast" role="status"></div>
+</div>
+
+<!-- =====================================================================
+     GANES CHATBOT WIDGET
+     Paste the install code from Ganes dashboard › Persona & Widget (or Chatbot Settings) between the two lines below.
+     Everything about the chatbot (persona, greeting, colours, answers) is then managed in the dashboard.
+     ===================================================================== -->
+<!-- GANES WIDGET START -->
+<!-- GANES WIDGET END -->
+
+<script>
+/* ---------- data: products.csv is the single source of truth (same columns as Ganes › Products) ---------- */
+const ALIAS = {
+  sku:["sku"], parent:["parent sku","parent_sku","parentsku","sku induk"], name:["nama produk","product name","name","nama"],
+  short:["deskripsi singkat","short description","description","deskripsi"], price:["harga","price"],
+  before:["harga sebelum diskon","compare at price","original price","harga coret"], stock:["stok","stock","qty","quantity"],
+  vis:["visibility","status","visibilitas"], cat:["kategori","category"], attrs:["atribut (json)","attributes","atribut"]
+};
+function parseCSV(t){
+  const rows=[]; let row=[], f="", q=false;
+  for (let i=0;i<t.length;i++){ const c=t[i];
+    if (q){ if (c==='"'){ if (t[i+1]==='"'){ f+='"'; i++; } else q=false; } else f+=c; }
+    else if (c==='"') q=true; else if (c===','){ row.push(f); f=""; }
+    else if (c==='\n'||c==='\r'){ if (c==='\r'&&t[i+1]==='\n') i++; row.push(f); rows.push(row); row=[]; f=""; }
+    else f+=c; }
+  if (f||row.length){ row.push(f); rows.push(row); }
+  return rows.filter(r => r.some(x => x.trim()));
+}
+function toProducts(text){
+  const [h,...rows]=parseCSV(text.replace(/^\uFEFF/,"")); const idx={};
+  const head=h.map(x=>x.trim().toLowerCase());
+  for (const k in ALIAS) idx[k]=head.findIndex(x=>ALIAS[k].includes(x));
+  const num=v=>Number(String(v||"").replace(/[^\d]/g,""))||0;
+  return rows.map(r=>{ const g=k=>idx[k]>=0?(r[idx[k]]||"").trim():"";
+    let attrs={}; try{ attrs=g("attrs")?JSON.parse(g("attrs")):{}; }catch(e){}
+    return { sku:g("sku"), parent:g("parent"), name:g("name"), short:g("short"), price:num(g("price")), before:num(g("before")),
+             stock:num(g("stock")), active:!/inactive|draft|hidden|nonaktif/i.test(g("vis")), cat:g("cat")||"Lainnya", attrs }; })
+    .filter(p=>p.sku&&p.name);
+}
+let P=[], S={};
+/* product art in the Gelora demo style: flat inline SVG, pine + saffron */
+const svg=b=>`<svg viewBox="0 0 120 120" aria-hidden="true">${b}</svg>`, G="#14503C", D="#0E3D2D", Y="#F0A500", L="#CBE2D6";
+const ART={
+  pot:svg(`<rect x="22" y="48" width="76" height="50" rx="10" fill="${G}"/><rect x="16" y="38" width="88" height="12" rx="6" fill="${D}"/><rect x="52" y="26" width="16" height="12" rx="4" fill="${Y}"/>`),
+  bottle:svg(`<rect x="46" y="12" width="28" height="12" rx="3" fill="${D}"/><rect x="38" y="24" width="44" height="82" rx="14" fill="${G}"/><rect x="38" y="56" width="44" height="16" fill="${Y}"/>`),
+  fan:svg(`<circle cx="60" cy="48" r="36" fill="${G}"/><path d="M60 48c-4-22 14-28 18-14 2 8-8 14-18 14zm0 0c20 8 14 26 0 22-8-2-8-14 0-22zm0 0c-16 14-30 2-22-10 4-6 16-4 22 10z" fill="${L}"/><circle cx="60" cy="48" r="5" fill="${Y}"/><rect x="54" y="84" width="12" height="16" fill="${D}"/><rect x="36" y="100" width="48" height="8" rx="4" fill="${D}"/>`),
+  pack:svg(`<path d="M32 18h56l6 12v76H26V30z" fill="${G}"/><rect x="26" y="50" width="68" height="32" fill="${Y}"/><rect x="32" y="18" width="56" height="10" fill="${D}"/>`),
+  jar:svg(`<rect x="38" y="14" width="44" height="14" rx="3" fill="${Y}"/><rect x="30" y="28" width="60" height="78" rx="12" fill="${G}"/><rect x="30" y="56" width="60" height="26" fill="${L}"/>`),
+  tube:svg(`<path d="M34 14h52l-8 76H42z" fill="${G}"/><rect x="34" y="14" width="52" height="10" fill="${D}"/><rect x="48" y="90" width="24" height="16" rx="3" fill="${Y}"/><rect x="44" y="42" width="32" height="24" fill="${L}"/>`),
+  device:svg(`<rect x="34" y="12" width="52" height="96" rx="10" fill="${G}"/><rect x="42" y="24" width="36" height="28" rx="3" fill="${L}"/><circle cx="60" cy="78" r="12" fill="${Y}"/>`),
+  cable:svg(`<path d="M30 28v42a20 20 0 0020 20h20a20 20 0 0020-20V50" fill="none" stroke="${G}" stroke-width="8"/><rect x="20" y="10" width="20" height="22" rx="3" fill="${D}"/><rect x="80" y="30" width="20" height="22" rx="3" fill="${Y}"/>`),
+  phones:svg(`<path d="M24 66V58a36 36 0 0172 0v8" fill="none" stroke="${G}" stroke-width="8"/><rect x="14" y="62" width="20" height="36" rx="8" fill="${Y}"/><rect x="86" y="62" width="20" height="36" rx="8" fill="${Y}"/>`),
+  lamp:svg(`<path d="M60 12a34 34 0 00-20 62c4 3 5 8 5 12h30c0-4 1-9 5-12a34 34 0 00-20-62z" fill="${Y}"/><rect x="45" y="90" width="30" height="16" rx="3" fill="${G}"/>`),
+  book:svg(`<rect x="26" y="12" width="68" height="96" rx="6" fill="${G}"/><rect x="26" y="12" width="12" height="96" fill="${D}"/><rect x="48" y="30" width="36" height="14" fill="${Y}"/>`),
+  pen:svg(`<rect x="50" y="10" width="20" height="78" rx="4" fill="${G}"/><rect x="50" y="10" width="20" height="16" fill="${Y}"/><path d="M50 88h20l-10 22z" fill="${D}"/>`),
+  baby:svg(`<circle cx="60" cy="42" r="28" fill="${G}"/><circle cx="50" cy="40" r="4" fill="#fff"/><circle cx="70" cy="40" r="4" fill="#fff"/><path d="M50 52c6 6 14 6 20 0" fill="none" stroke="#fff" stroke-width="3"/><path d="M30 76h60l-8 32H38z" fill="${Y}"/>`),
+  bag:svg(`<path d="M44 40V30a16 16 0 0132 0v10" fill="none" stroke="${D}" stroke-width="7"/><path d="M26 40h68l6 68H20z" fill="${G}"/><circle cx="60" cy="72" r="12" fill="${Y}"/>`)
+};
+const CAT_ART={"Dapur & Rumah Tangga":"pot","Makanan & Minuman":"jar","Perawatan Diri":"tube","Elektronik & Aksesoris":"device","Alat Tulis & Kantor":"book","Ibu & Bayi":"baby"};
+const icon=c=>[ART[CAT_ART[c]||"bag"],"var(--thumb)"];
+const KEY=[["rice cooker","pot"],["panci","pot"],["botol","bottle"],["kipas","fan"],["kopi","pack"],["teh","pack"],["keripik","pack"],["madu","jar"],["sabun","bottle"],["sampo","bottle"],["pasta gigi","tube"],["sunscreen","tube"],
+  ["power bank","device"],["kabel","cable"],["earphone","phones"],["lampu","lamp"],["buku","book"],["pulpen","pen"],["map","book"],["kalkulator","device"],["popok","baby"],["tisu","pack"],["telon","bottle"]];
+const pic=p=>{ const n=p.name.toLowerCase(), k=KEY.find(([w])=>n.includes(w)); return [k?ART[k[1]]:icon(p.cat)[0],"var(--thumb)"]; };
+const rp=n=>"Rp"+n.toLocaleString("id-ID");
+const slug=s=>s.toLowerCase().replace(/&/g,"dan").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const stockTxt=n=>n<=0?['<span class="bad">Habis</span>']:n<=5?[`<span class="warn">Stok tinggal ${n}</span>`]:[`<span class="ok">Stok ${n}</span>`];
+const groups=()=>{ const m=new Map(); P.filter(p=>p.active).forEach(p=>{ const k=p.parent||p.sku; if(!m.has(k)) m.set(k,[]); m.get(k).push(p); }); return [...m.values()]; };
+const shown=g=>g.find(v=>v.stock>0)||g[0];
+const baseName=n=>n.split(" · ")[0];
+
+/* ---------- views ---------- */
+const $=id=>document.getElementById(id), M=$("main");
+function card(g){ const p=shown(g), [e,bg]=pic(p), total=g.reduce((a,v)=>a+v.stock,0);
+  return `<a class="pc" href="#/produk/${encodeURIComponent(p.sku)}"><div class="img" style="background:${bg}">${e}</div>
+    <div class="t">${baseName(p.name)}</div><div class="p">${rp(p.price)}${p.before>p.price?`<s>${rp(p.before)}</s>`:""}</div><div class="s">${stockTxt(total)}</div></a>`; }
+function home(){
+  const cats=[...new Set(P.filter(p=>p.active).map(p=>p.cat))];
+  const best=groups().filter(g=>g.some(v=>v.stock>0)).slice(0,6);
+  const promo=S.promos[0];
+  M.innerHTML=`<div class="hero"><b>${promo.title}</b><span>${promo.body}</span><a class="cta" href="#/promo">Lihat semua promo</a></div>
+    <h2>Kategori</h2><div class="cats">${cats.map(c=>{const [e,bg]=icon(c);return `<a class="cat" href="#/kategori/${slug(c)}"><div class="ic" style="background:${bg}">${e}</div>${c}</a>`}).join("")}</div>
+    <h2>Pilihan hari ini</h2><div class="grid">${best.map(card).join("")}</div>
+    <button class="chatbtn" data-chat>Ada pertanyaan? Chat dengan kami</button>
+    <p class="foot">${S.store.name} · ${S.store.tagline}<br>Toko dummy untuk demo Ganes. <a href="info.html" style="text-decoration:underline">Info toko lengkap</a></p>`; }
+function kategori(sl){
+  const cats=[...new Set(P.filter(p=>p.active).map(p=>p.cat))];
+  if (!sl){ M.innerHTML=`<h2 style="margin-top:4px">Semua kategori</h2>`+cats.map(c=>{const [e,bg]=icon(c),n=groups().filter(g=>g[0].cat===c).length;
+    return `<a class="card" href="#/kategori/${slug(c)}" style="display:flex;align-items:center;gap:12px"><span class="cat" style="padding:0;background:none"><span class="ic" style="background:${bg};margin:0">${e}</span></span><span><b>${c}</b><p>${n} produk</p></span></a>`}).join(""); return; }
+  const c=cats.find(x=>slug(x)===sl)||""; const gs=groups().filter(g=>g[0].cat===c);
+  M.innerHTML=`<h2 style="margin-top:4px">${c}</h2><div class="grid">${gs.map(card).join("")||'<p class="empty">Belum ada produk.</p>'}</div>`; }
+function produk(sku){
+  const p=P.find(x=>x.sku===sku); if(!p||!p.active){ M.innerHTML='<p class="empty">Produk tidak ditemukan.</p>'; return; }
+  const g=P.filter(x=>x.active&&(x.parent||x.sku)===(p.parent||p.sku)); const [e,bg]=pic(p);
+  const attrs=Object.entries(p.attrs);
+  M.innerHTML=`<div class="pd"><div class="img" style="background:${bg}">${e}</div>
+    <h1>${baseName(p.name)}</h1><div class="price">${rp(p.price)}${p.before>p.price?`<s>${rp(p.before)}</s>`:""}</div>
+    <div style="margin-top:4px;font-size:13px;font-weight:600">${stockTxt(p.stock)} · SKU ${p.sku}</div>
+    ${g.length>1?`<div class="chips">${g.map(v=>`<a class="chip ${v.sku===p.sku?"on":""}" href="#/produk/${encodeURIComponent(v.sku)}" style="display:inline-flex;align-items:center">${v.name.split(" · ")[1]||v.sku}${v.stock<=0?" (habis)":""}</a>`).join("")}</div>`:""}
+    <p class="desc ${p.short?"":"empty"}">${p.short||"Deskripsi produk belum tersedia."}</p>
+    ${attrs.length?`<div class="spec">${attrs.map(([k,v])=>`<div><span>${k[0].toUpperCase()+k.slice(1)}</span><span>${v}</span></div>`).join("")}<div><span>Kategori</span><span>${p.cat}</span></div></div>`:""}
+    <div class="buy"><button class="btn sec" data-chat>Tanya</button><button class="btn" data-add="${p.sku}" ${p.stock<=0?"disabled":""}>${p.stock<=0?"Stok habis":"+ Keranjang"}</button></div></div>`; }
+function promo(){ M.innerHTML=`<h2 style="margin-top:4px">Promo</h2>`+S.promos.map(x=>`<div class="card"><b>${x.title}</b><p>${x.body}</p><p>${x.period}</p>${x.code?`<span class="tag">Kode: ${x.code}</span>`:""}${x.doc?` <a class="tag" href="${x.doc}" target="_blank" rel="noopener">Buka PDF syarat</a>`:""}</div>`).join(""); }
+function lacak(){
+  M.innerHTML=`<h2 style="margin-top:4px">Lacak pesanan</h2><div class="field"><input id="oid" placeholder="Nomor pesanan, misalnya TAA-240101" aria-label="Nomor pesanan"><button class="btn" id="go">Cek</button></div><div id="res" style="margin-top:12px"></div>
+    <p class="foot">Contoh nomor dummy: ${S.orders.map(o=>o.id).join(", ")}</p>`;
+  const run=()=>{ const v=$("oid").value.trim().toUpperCase(), o=S.orders.find(x=>x.id===v);
+    $("res").innerHTML=o?`<div class="card"><b>${o.id} · ${o.status}</b><p>${o.detail}</p><p>${o.items}</p></div>`:`<p class="empty">Pesanan ${v||""} tidak ditemukan.</p>`; };
+  $("go").onclick=run; $("oid").onkeydown=e=>{ if(e.key==="Enter") run(); }; }
+function bantuan(){ const s=S.store;
+  M.innerHTML=`<h2 style="margin-top:4px">Bantuan</h2><button class="chatbtn" data-chat>Chat dengan kami</button>
+    <h2>Pertanyaan umum</h2>${S.faq.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("")}
+    <h2>Jam buka</h2><div class="card">${s.hours.map(([d,h])=>`<div class="row"><span>${d}</span><b style="display:inline;font-size:13.5px">${h}</b></div>`).join("")}</div>
+    <h2>Dokumen</h2>${[["Kebijakan Retur dan Penukaran","docs/kebijakan-retur.pdf"],["Pengiriman dan Pembayaran","docs/pengiriman-dan-pembayaran.pdf"],["Garansi Produk Elektronik","docs/garansi-elektronik.pdf"],["Promo Cicilan 0% (PDF hasil scan)","docs/promo-cicilan-scan.pdf"]].map(([t,u])=>`<a class="card" href="${u}" target="_blank" rel="noopener" style="display:block"><b>${t}</b><p>PDF</p></a>`).join("")}
+    <h2>Kontak</h2><div class="card"><p>${s.address}</p><p>WhatsApp ${s.whatsapp}</p><p>${s.email}</p><p>Retur dan penukaran: maksimal ${s.return_days_profile} hari setelah barang diterima.</p></div>`; }
+function keranjang(){ const c=cart(), items=Object.entries(c).map(([k,n])=>[P.find(p=>p.sku===k),n]).filter(([p])=>p);
+  const total=items.reduce((a,[p,n])=>a+p.price*n,0);
+  M.innerHTML=`<h2 style="margin-top:4px">Keranjang</h2>`+(items.length?items.map(([p,n])=>`<div class="card" style="display:flex;justify-content:space-between;gap:10px"><span><b>${p.name}</b><p>${rp(p.price)} × ${n}</p></span><button class="chip" data-rm="${p.sku}">Hapus</button></div>`).join("")+
+    `<div class="card"><div class="row"><span>Total</span><b style="display:inline">${rp(total)}</b></div></div><button class="btn" style="width:100%" data-checkout>Lanjut ke pembayaran</button>`:'<p class="empty">Keranjang masih kosong.</p>'); }
+function cari(q){ const t=q.toLowerCase(); const gs=groups().filter(g=>g.some(p=>(p.name+" "+p.short+" "+p.cat).toLowerCase().includes(t)));
+  M.innerHTML=`<h2 style="margin-top:4px">Hasil untuk “${q}”</h2><div class="grid">${gs.map(card).join("")}</div>${gs.length?"":'<p class="empty">Tidak ada produk yang cocok. Coba tanya lewat chat.</p>'}`; }
+
+/* ---------- cart (per browser) ---------- */
+const cart=()=>{ try{ return JSON.parse(localStorage.getItem("taa-cart")||"{}"); }catch(e){ return {}; } };
+const saveCart=c=>{ try{ localStorage.setItem("taa-cart",JSON.stringify(c)); }catch(e){} badge(); };
+const badge=()=>{ const n=Object.values(cart()).reduce((a,b)=>a+b,0); $("cartN").hidden=!n; $("cartN").textContent=n; };
+let tt; const toast=t=>{ $("toast").textContent=t; $("toast").classList.add("show"); clearTimeout(tt); tt=setTimeout(()=>$("toast").classList.remove("show"),2200); };
+
+/* ---------- chat: hands over to the Ganes widget when it is installed ---------- */
+function openChat(){
+  const w=window.GanesChat||window.Ganes||window.ganes||window.GanesWidget;
+  for (const fn of ["open","show","toggle"]) if (w&&typeof w[fn]==="function"){ w[fn](); return; }
+  const launcher=document.querySelector('[id*="ganes" i] button, [class*="ganes" i] button, iframe[src*="ganes" i]');
+  if (launcher&&launcher.click){ launcher.click(); return; }
+  toast("Chat belum aktif di toko demo ini.");
+}
+
+/* ---------- router ---------- */
+function route(){
+  const h=location.hash.replace(/^#\/?/,""), [a,b]=h.split("/");
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.dataset.t===(a||"home")));
+  M.scrollTop=0; $("q").value="";
+  if (!a) home(); else if (a==="kategori") kategori(b); else if (a==="produk") produk(decodeURIComponent(b||""));
+  else if (a==="promo") promo(); else if (a==="lacak") lacak(); else if (a==="bantuan") bantuan(); else if (a==="keranjang") keranjang(); else home();
+}
+document.addEventListener("click",e=>{
+  if (e.target.closest("[data-chat]")) openChat();
+  const add=e.target.closest("[data-add]"); if (add){ const c=cart(); c[add.dataset.add]=(c[add.dataset.add]||0)+1; saveCart(c); toast("Ditambahkan ke keranjang"); }
+  const rm=e.target.closest("[data-rm]"); if (rm){ const c=cart(); delete c[rm.dataset.rm]; saveCart(c); keranjang(); }
+  if (e.target.closest("[data-checkout]")) toast("Ini toko dummy: pembayaran tidak diproses.");
+});
+let qt; $("q").addEventListener("input",e=>{ clearTimeout(qt); const v=e.target.value.trim(); qt=setTimeout(()=>v?cari(v):route(),200); });
+addEventListener("hashchange",route);
+
+/* ---------- boot: inline data (preview build) or files (GitHub Pages) ---------- */
+(async()=>{
+  try{
+    const csv = window.__CSV__ ?? await (await fetch("data/products.csv",{cache:"no-store"})).text();
+    S = window.__STORE__ ?? await (await fetch("data/store.json",{cache:"no-store"})).json();
+    P = toProducts(csv); badge(); route();
+  }catch(e){ M.innerHTML='<p class="empty">Data toko belum bisa dimuat. Buka lewat GitHub Pages atau server lokal, bukan file langsung.</p>'; }
+})();
+</script>
+</body>
+</html>

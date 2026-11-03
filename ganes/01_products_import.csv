@@ -1,0 +1,27 @@
+SKU,Parent SKU,Nama Produk,Deskripsi Singkat,Harga,Harga Sebelum Diskon,Stok,Visibility,Kategori
+TAA-DR-001,,Rice Cooker Mini 1 L,"Masak nasi 1–3 porsi, mode hangat otomatis, panci anti lengket.",289000,329000,0,active,Dapur & Rumah Tangga
+TAA-DR-002,,Panci Set Stainless 3 pcs,"Ukuran 16, 18, 20 cm. Bisa untuk kompor gas dan induksi.",245000,,14,active,Dapur & Rumah Tangga
+TAA-DR-003-HTM,TAA-DR-003,Botol Minum 750 ml · Hitam,"Tahan dingin 12 jam dan panas 6 jam, tutup anti bocor.",59000,,22,active,Dapur & Rumah Tangga
+TAA-DR-003-BRU,TAA-DR-003,Botol Minum 750 ml · Biru,"Tahan dingin 12 jam dan panas 6 jam, tutup anti bocor.",59000,,9,active,Dapur & Rumah Tangga
+TAA-DR-004,,Kipas Angin Meja 12 inci,"3 kecepatan, kepala bisa berputar, hemat listrik 35 W.",199000,,7,active,Dapur & Rumah Tangga
+TAA-MM-001,,Kopi Bubuk Robusta 200 g,"Robusta Lampung sangrai medium, giling halus untuk tubruk.",42000,,60,active,Makanan & Minuman
+TAA-MM-002,,Teh Melati Celup isi 25,"Teh melati wangi, cocok untuk teh manis hangat atau es teh.",12500,,85,active,Makanan & Minuman
+TAA-MM-003,,Keripik Singkong Balado 150 g,"Renyah, pedas manis, tanpa pengawet tambahan.",15000,,40,active,Makanan & Minuman
+TAA-MM-004,,Madu Hutan 250 ml,"Madu hutan murni dari Sumbawa, kemasan botol kaca.",78000,,3,active,Makanan & Minuman
+TAA-PD-001,,Sabun Cair Aloe 500 ml,"Sabun mandi cair dengan lidah buaya, lembut di kulit.",28000,,33,active,Perawatan Diri
+TAA-PD-002,,Sampo Lidah Buaya 340 ml,Membantu rambut lebih lembut dan tidak mudah kusut.,34000,,18,active,Perawatan Diri
+TAA-PD-003,,Pasta Gigi Herbal 190 g,Dengan daun sirih dan cengkeh untuk napas segar.,16500,,50,active,Perawatan Diri
+TAA-PD-004,,Sunscreen SPF 50 50 ml,"Ringan, tidak lengket, perlindungan UVA dan UVB.",69000,85000,11,active,Perawatan Diri
+TAA-EL-001,,Power Bank 10.000 mAh,"Dua port USB-A dan satu USB-C, pengisian cepat 18 W.",179000,,16,active,Elektronik & Aksesoris
+TAA-EL-002,,Kabel Data USB-C 1 m,"Kabel nilon kuat, mendukung pengisian cepat 3 A.",35000,,48,active,Elektronik & Aksesoris
+TAA-EL-003,,Earphone Bluetooth,,249000,299000,5,active,Elektronik & Aksesoris
+TAA-EL-004,,Lampu LED 12 W,"Cahaya putih terang, setara lampu biasa 100 W.",24000,,70,active,Elektronik & Aksesoris
+TAA-AT-001,,Buku Tulis A5 isi 5,"Kertas 58 gsm, 38 lembar per buku, sampul tebal.",27000,,64,active,Alat Tulis & Kantor
+TAA-AT-002,,Pulpen Gel Hitam isi 12,"Tinta lancar 0,5 mm, cepat kering.",36000,,25,active,Alat Tulis & Kantor
+TAA-AT-003,,Map Plastik Kancing isi 10,"Ukuran folio, warna campur.",18000,,0,inactive,Alat Tulis & Kantor
+TAA-AT-004,,Kalkulator Saku 12 Digit,"Tenaga surya dan baterai, tombol empuk.",45000,,9,active,Alat Tulis & Kantor
+TAA-IB-001-M,TAA-IB-001,Popok Bayi Celana · M isi 30,"Lembut, daya serap hingga 12 jam, untuk berat 6–11 kg.",89000,,12,active,Ibu & Bayi
+TAA-IB-001-L,TAA-IB-001,Popok Bayi Celana · L isi 30,"Lembut, daya serap hingga 12 jam, untuk berat 9–14 kg.",95000,,0,active,Ibu & Bayi
+TAA-IB-002,,Tisu Basah Bayi isi 50,"Tanpa alkohol dan pewangi, aman untuk kulit sensitif.",14000,,90,active,Ibu & Bayi
+TAA-IB-003,,Botol Susu Bayi 250 ml,"Bebas BPA, dot silikon anti kolik.",65000,,6,active,Ibu & Bayi
+TAA-IB-004,,Minyak Telon 60 ml,Hangat di perut dan membantu mengusir nyamuk.,22000,,27,active,Ibu & Bayi

@@ -1,0 +1,120 @@
+{
+ "store": {
+  "name": "Toko Ada Aja",
+  "tagline": "Kebutuhan harian, ada aja di sini.",
+  "type": "Toko serba ada (retail umum)",
+  "dummy": true,
+  "address": "Jl. Melati Raya No. 18, Bekasi Timur, Kota Bekasi, Jawa Barat 17113 (alamat fiktif)",
+  "phone": "0812-0000-1818 (nomor dummy)",
+  "whatsapp": "0812-0000-1818 (nomor dummy)",
+  "email": "halo@tokoadaaja.example",
+  "hours": [
+   [
+    "Senin–Sabtu",
+    "08.00–21.00 WIB"
+   ],
+   [
+    "Minggu",
+    "09.00–20.00 WIB"
+   ],
+   [
+    "Hari libur nasional",
+    "09.00–17.00 WIB"
+   ]
+  ],
+  "live_agent_hours": "Senin–Sabtu, 09.00–18.00 WIB",
+  "currency": "IDR",
+  "language": "id-ID",
+  "return_days_profile": 7,
+  "brand": {
+   "primary": "#14503C",
+   "ink": "#131A16",
+   "soft": "#E6F3EC",
+   "accent": "#F0A500"
+  },
+  "delivery": [
+   "Same day untuk Bekasi dan Jakarta Timur, pesanan masuk sebelum 14.00 WIB.",
+   "Kota lain di Indonesia: 2–4 hari kerja lewat kurir reguler.",
+   "Gratis ongkir area Bekasi untuk belanja minimal Rp150.000."
+  ],
+  "payment": [
+   "Transfer bank (BCA, Mandiri, BRI)",
+   "E-wallet (GoPay, OVO, DANA)",
+   "COD khusus area Bekasi, maksimal Rp1.000.000"
+  ]
+ },
+ "promos": [
+  {
+   "id": "gajian-hemat",
+   "title": "Gajian Hemat",
+   "body": "Diskon 10% dengan kode GAJIAN10, minimal belanja Rp200.000.",
+   "period": "Tanggal 25–31 setiap bulan",
+   "code": "GAJIAN10"
+  },
+  {
+   "id": "teh-b2g1",
+   "title": "Beli 2 Gratis 1 Teh Melati",
+   "body": "Beli 2 Teh Melati Celup isi 25, gratis 1. Berlaku kelipatan.",
+   "period": "Selama stok ada",
+   "code": ""
+  },
+  {
+   "id": "cicilan-0",
+   "title": "Cicilan 0% 3 bulan",
+   "body": "Syarat dan kartu yang berlaku ada di dokumen Promo Cicilan (PDF).",
+   "period": "Bulan ini",
+   "code": "",
+   "doc": "docs/promo-cicilan-scan.pdf"
+  }
+ ],
+ "orders": [
+  {
+   "id": "TAA-240101",
+   "status": "Dikirim",
+   "detail": "Kurir reguler · nomor resi JX0000000101 (dummy) · estimasi tiba 2 hari",
+   "items": "Power Bank 10.000 mAh ×1"
+  },
+  {
+   "id": "TAA-240102",
+   "status": "Diproses",
+   "detail": "Pesanan sedang dikemas, dikirim hari ini sebelum 17.00 WIB",
+   "items": "Popok Bayi Celana M ×2, Tisu Basah Bayi ×3"
+  },
+  {
+   "id": "TAA-240103",
+   "status": "Selesai",
+   "detail": "Diterima 3 hari lalu",
+   "items": "Kopi Bubuk Robusta 200 g ×2"
+  }
+ ],
+ "faq": [
+  [
+   "Jam buka toko?",
+   "Senin–Sabtu 08.00–21.00 WIB, Minggu 09.00–20.00 WIB, hari libur nasional 09.00–17.00 WIB."
+  ],
+  [
+   "Berapa lama pengiriman?",
+   "Same day untuk Bekasi dan Jakarta Timur bila pesan sebelum 14.00 WIB. Kota lain 2–4 hari kerja."
+  ],
+  [
+   "Ada gratis ongkir?",
+   "Gratis ongkir area Bekasi untuk belanja minimal Rp150.000."
+  ],
+  [
+   "Bisa bayar di tempat (COD)?",
+   "Bisa, khusus area Bekasi, maksimal Rp1.000.000."
+  ],
+  [
+   "Bagaimana cara retur?",
+   "Lihat Kebijakan Retur. Barang harus belum dipakai, label masih terpasang, dan disertai bukti pembelian."
+  ],
+  [
+   "Bagaimana cara lacak pesanan?",
+   "Buka menu Lacak Pesanan lalu masukkan nomor pesanan, misalnya TAA-240101."
+  ],
+  [
+   "Bisa bicara dengan orang?",
+   "Bisa. Ketik “bicara dengan admin” di chat. Admin tersedia Senin–Sabtu 09.00–18.00 WIB."
+  ]
+ ]
+}

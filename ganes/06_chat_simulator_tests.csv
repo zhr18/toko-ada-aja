@@ -1,0 +1,31 @@
+No,Kategori,Pertanyaan,Jawaban yang diharapkan
+1,Produk,Rice cooker mini ada stoknya?,Saat ini habis (stok 0).
+2,Produk,Botol minum warna biru masih ada?,"Ada, stok 9."
+3,Produk,Popok celana ukuran L ada?,Ukuran L habis; ukuran M ada stok 12.
+4,Produk,Harga power bank berapa?,"Rp179.000, kapasitas 10.000 mAh."
+5,Produk,Madu hutan masih ada?,"Ada, stok tinggal 3."
+6,Produk,Earphone bluetooth bagus nggak? Spesifikasinya apa?,"Deskripsi belum tersedia; Bluetooth 5.3, Rp249.000 (sebelumnya Rp299.000)."
+7,Produk,Ada map plastik?,Produk tidak aktif / tidak dijual saat ini.
+8,Produk,Sunscreen SPF berapa?,"SPF 50 PA++++, 50 ml, Rp69.000."
+9,Produk,Kopi asalnya dari mana?,"Robusta Lampung, 200 g."
+10,Produk,Kalkulator pakai baterai?,Tenaga surya dan baterai.
+11,Promo,Ada promo apa sekarang?,"Gajian Hemat (GAJIAN10), Beli 2 Gratis 1 Teh Melati, Cicilan 0% 3 bulan."
+12,Promo,Kode diskon gajian apa?,"GAJIAN10, diskon 10% minimal Rp200.000, tanggal 25–31."
+13,Promo,Beli teh melati ada gratisnya?,"Beli 2 gratis 1, berlaku kelipatan."
+14,Kebijakan,Cicilan 0% pakai kartu apa saja?,"BCA, Mandiri, BNI; minimal Rp500.000 (hanya ada di PDF scan → bisa gagal)."
+15,Kebijakan,Berapa lama batas retur?,30 hari menurut kebijakan retur (profil toko menulis 7 hari → konflik).
+16,Kebijakan,Makanan yang sudah dibuka bisa diretur?,Tidak bisa.
+17,Kebijakan,Kapan dana retur kembali?,3–7 hari kerja setelah barang diterima dan diperiksa.
+18,Kebijakan,Garansi rice cooker berapa lama?,1 tahun.
+19,Kebijakan,Kabel data bergaransi?,"Tidak bergaransi, tapi bisa ditukar bila rusak saat diterima."
+20,Pengiriman,Bisa same day ke Jakarta Timur?,"Bisa, pesan sebelum 14.00 WIB."
+21,Pengiriman,Ongkir gratis minimal berapa?,"Area Bekasi, minimal Rp150.000."
+22,Pengiriman,Kirim ke Surabaya berapa lama?,2–4 hari kerja.
+23,Pembayaran,Bisa COD?,"Bisa, khusus Bekasi, maksimal Rp1.000.000."
+24,Pembayaran,Bisa bayar pakai OVO?,"Bisa: GoPay, OVO, DANA."
+25,Toko,Hari Minggu buka jam berapa?,09.00–20.00 WIB.
+26,Toko,Alamat toko di mana?,"Jl. Melati Raya No. 18, Bekasi Timur (fiktif)."
+27,Pesanan,Pesanan TAA-240101 sampai mana?,"Dikirim, estimasi tiba 2 hari."
+28,Pesanan,Status TAA-240102?,"Diproses, dikirim hari ini sebelum 17.00 WIB."
+29,Handover,Saya mau bicara dengan admin.,Diteruskan ke admin; jam admin Senin–Sabtu 09.00–18.00 WIB.
+30,Handover,"Barang saya rusak, mau komplain.","Minta nomor pesanan + foto, lalu serahkan ke admin."
